@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* 新品推荐--div样式 */
+
+#new_products,#preferred,.container{
+	width:70%;
+	height:100%;
+	margin: 0 auto;
+}
+.container{
+	
+}
+table{
+	margin:0 auto;
+}
+/*新品推荐--图片样式  */
+#img_new_products{
+	height:450px;
+}
+
+/* 实现图片轮播功能 */
+/* 实现思路
+	轮播五张图片:
+		放置七张图片:5123451;
+		更改position 属性;
+		点击切换按钮时,图片相应左移或右移;其中在1和5张图片时,规则不同;
+	
+
+ */
+
+		
+		a{
+			text-decoration: none;	/* 文本装饰,下划线等 */
+		 }
+		.container{
+			position: relative;	/* 以文档流动中的当前对象自身位置为坐标原点 */
+			width: 980px;	/* 1920 */
+			height: 450px;	/* 600 */
+			margin:0px auto 0 245px;
+			
+				
+			overflow:hidden;	/* 设置对象内容超过指定高和宽时如何显示内容 */
+			background: white;
+			z-index: 9;	/* 导航菜单的二级菜单z-index=10 */
+			
+		}
+		 .container .wrap {
+            position: absolute;	/* 对象脱离文档流动,根据浏览器或具有定位功能的父元素的左上角为坐标原点来定位 */
+            width: 6860px;
+            height: 450px;
+            z-index: 1;	
+        }
+		.container .wrap img{
+			margin:20px 30px 20px 30px;
+			float: left; 
+            width:920px;
+            height:410px;
+		}
+		.container .buttons {
+            position: absolute;	
+           	padding-left:300px;
+            bottom:40px;
+         
+            width: 450px;
+            height: 10px;
+            z-index: 2;	
+        }
+        .container .buttons span {
+            margin-left: 10px;
+            display: inline-block;	
+            width: 70px;
+            height:5px;
+            border-radius: 12%;
+            background-color: #A9A9A9	;
+           
+            
+            cursor: pointer;	
+        }
+         .container .buttons span.on{
+            background-color: 	#00CED1		;
+        }
+         .container .arrow {
+            position: absolute;
+            top: 40%;
+            color: 	#A9A9A9;
+            padding:0px 14px;
+            border-radius: 40%;
+            font-size: 80px;
+            z-index: 2;
+            display: none;	
+        }
+        .container .arrow_left {
+            left: 40px;
+        }
+        .container .arrow_right {
+            right: 40px;
+        }
+        .container:hover .arrow {	
+            display: block;	//显示元素
+        }
+        .container .arrow:hover {	
+            background-color:	#F5F5F5		;
+        }		

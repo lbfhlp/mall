@@ -1,0 +1,43 @@
+
+
+0---概述
+	
+	DBUtils是Java编程中的数据库操作实用工具，小巧简单实用。
+	
+	DBUtils封装了对JDBC的操作，简化了JDBC操作，可以少写代码。
+	
+	DBUtils三个核心功能介绍
+	
+	QueryRunner中提供对sql语句操作的API
+	ResultSetHandler接口，用于定义select操作后，怎样封装结果集
+	DBUtils类，它就是一个工具类，定义了关闭资源与事务处理的方法
+----------------------------
+
+一.QueryRunner核心类;
+	1.QueryRunner(DataSourcr ds),提供数据源（连接池），DbUtils底层自动维护连接connection
+	2.update（String sql，Obj...params），执行更新数据;用于update,delete,insert语句(返回的是一个int);
+	3.query（String sql，ResultSetHandler<T>rsh,Object...panrams)，执行select语句(返回的是结果集);
+
+----------------------
+二.几种ResultSetHandler结果集处理类;
+	ArrayHandler：适合取1条记录，把结果集中的第一行数据转成对象数组。
+	
+	ArrayListHandler：适合取多条记录，把结果集中的每一行数据都转成一个对象数组，再存放到List中。
+	
+	BeanHandler：将结果集中的第一行数据封装到一个对应的JavaBean实例中（把每条记录封装成对象，适合取一条记录）
+	
+	BeanListHandler：将结果集中的每一行数据都封装到一个对应的JavaBean实例中，存放到List里。//重点
+	
+	MapHandler：将结果集中的第一行数据封装到一个Map里，key是列名，value就是对应的值。//重点
+	
+	MapListHandler：将结果集中的每一行数据都封装到一个Map里，然后再存放到List
+	
+	
+	ColumnListHandler：将结果集中某一列的数据存放到List中。
+	
+	KeyedHandler(name)：将结果集中的每一行数据都封装到一个Map里(List<Map>)，再把这些map再存到一个map里，其key为指定的列。
+	
+	ScalarHandler:将结果集第一行的某一列放到某个对象中。//重点
+	
+	
+	

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+		<bean id="GoodsAdd" class="club.ccpet.mall.facade.impl.GoodsAddFacadeImpl">
+		</bean>
+		<bean id="SpuSkuFacadeImpl" class="club.ccpet.mall.facade.impl.SpuSkuFacadeImpl">
+		</bean>
+</beans>
+

@@ -1,0 +1,2 @@
+
+2.XmlBeanFactory为基于xml文件的bean工厂实现类  .采用懒汉式单例模式 .初始化时会加载对应的xml配置文件 默认加载applicationContext.xml.该xml文件位于WebContent\WEB-INF\

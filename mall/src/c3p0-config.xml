@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+
+<c3p0-config>
+
+  <named-config name="mall"> 
+  
+      <!--指定连接数据源的基本信息  -->
+      <!-- t_user为数据库名;&必须转义 -->
+      <property name="driverClass">com.mysql.jdbc.Driver</property>
+      <property name="jdbcUrl">jdbc:mysql://localhost:3306/mall?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT%2B8</property>
+      <property name="user">root</property>
+      <property name="password">123456</property>
+      
+      <!-- 若数据库中连接不足时，一次性向数据库服务器申请多少个连接-->
+    <property name="acquireIncrement">1</property>
+    <!-- 初始化数据库连接池时连接的数量-->
+    <property name="initialPoolSize">3</property>
+    <!-- 数据库连接池中的最小的数据库连接数-->
+    <property name="minPoolSize">3</property>
+    <!-- 数据库连接池中的最大的数据库连接数-->
+    <property name="maxPoolSize">15</property>
+    
+    <!-- c3p0 数据库连接池可以维护的 Statement 的个数-->
+    <property name="maxStatements">20</property> 
+    <!-- 每个连接同时可以使用的Statement 对象的个数-->
+    <property name="maxStatementsPerConnection">5</property>
+
+  
+  </named-config>
+</c3p0-config>

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+*{
+		margin-buttom: 10px;
+		
+	}
+	.content_area{
+		width: 70%;
+		margin: 0 auto;
+		
+	}
+	.sub_title_area{
+		text-align: center;height: 50px;margin:20px 0px;
+		background-color: yellow;
+		
+	}
+	img{
+		width:99%;
+		height: 99%;
+	}
+	
+	.sp-img{
+		width:260px;
+		
+		height: 260px;
+	}
+	.sub_content_area{
+		width: 100%;
+		overflow:auto;
+		text-align: center;
+		min-height: 400px;
+	}
+	
+	.div_sp{
+		
+		width:260;
+		height: 300px;
+		display:inline-block;
+		float:left;
+		text-align:center;
+		
+		margin:30px 20px;
+		padding:3px 3px;
+		border: 1px solid white;
+	}
+	.div_sp:hover{
+		border: 1px solid #7FFFD4;
+		
+	}
+	.maodian{
+		  	position:fixed;    
+              
+          	top:50%;
+	 		left:85%;
+	}
+	.maodian > ul > li{
+		
+	 	margin-bottom:2px;
+	 	text-align:center;
+	 	 
+	 	background-color: #F5F5DC;
+	 	
+	
+	}
+	/* 点击li区域跳转 */
+	.maodian-a{
+		display: block;
+		width:100px;
+		height:30px;
+	}
+	
+
+

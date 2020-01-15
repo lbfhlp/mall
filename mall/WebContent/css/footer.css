@@ -1,0 +1,7 @@
+@charset "UTF-8";
+#footer_area{
+	width:70%;
+	height:200px;
+	 margin: 0 auto;
+	background:url("../img/咸鱼.jpg") no-repeat ;
+}
